@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Debug Borders */
+/* header,
+.about-img-container,
+.my-work,
+.work-screen,
+.work-info,
+.contact-message,
+.contact-address,
+.contact-phone,
+.contact-img-container {
+  border: 2px solid orange;
+}
+
+.about-me,
+.work-card,
+footer {
+  border: 2px solid cyan;
+} */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Text Styles */
+.profile-name,
+.about-me h1,
+.my-work h1,
+.work-name,
+footer h1 {
+  font-family: "Playfair Display", sans-serif;
+}
+
+.about-me h1,
+.my-work h1,
+.work-screen-text,
+footer h1 {
+  font-size: 2em;
+}
+
+.about-info,
+.work-info {
+  color: rgb(100, 100, 100);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Header */
+header {
+  background: linear-gradient(150deg, rgb(138, 168, 236) 60%, #fff 20%);
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.profile-name {
+  position: absolute;
+  bottom: 0em;
+  font-size: 2.5em;
+  padding: 0 0 0.1em 0.2em;
+}
+
+.profile-pic {
+  color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+}
+
+.profile-pic img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!About Me */
+.about-me {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.about-info {
+  max-width: 300px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.about-img-container {
+  max-width: 300px;
+}
+
+.about-me img {
+  width: 32px;
+  filter: brightness(0) saturate(100%);
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!My Work */
+.my-work {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.work-card {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.work-screen {
+  color: white;
+  min-width: 300px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-card:nth-child(2) .work-screen {
+  background-color: dodgerblue;
+}
+.work-card:nth-child(3) .work-screen {
+  background-color: yellowgreen;
+}
+.work-card:nth-child(4) .work-screen {
+  background-color: lightcoral;
+}
+.work-card:nth-child(5) .work-screen {
+  background-color: lightseagreen;
+}
+.work-card:nth-child(6) .work-screen {
+  background-color: lightskyblue;
+}
+.work-card:nth-child(7) .work-screen {
+  background-color: slateblue;
+}
+
+.work-screen-text {
+  padding: 2rem;
+}
+
+.work-name {
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr 1.5fr 0.05fr;
+  justify-items: center;
+  font-size: 0.8em;
+}
+
+.work-name h2 {
+  grid-column: 2/3;
+}
+
+.work-img {
+  grid-column: 4/5;
+  align-self: center;
+}
+
+.work-name img {
+  width: 24px;
+  filter: brightness(0) saturate(100%);
+  padding-left: 0.5rem;
+}
+
+.work-info {
+  padding: 0 0.8rem 0 0.8rem;
+  font-size: 1.2em;
+  padding-bottom: 2rem;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Footer */
+footer {
+  background: rgb(138, 168, 236);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 10px 10px 10px 10px black;
+}
+
+.contact-message {
+  max-width: 300px;
+  font-size: 1.2em;
+  padding-bottom: 1.5rem;
+}
+
+.contact-address {
+  max-width: 300px;
+  padding-bottom: 1.5rem;
+}
+
+.contact-phone {
+  max-width: 300px;
+}
+
+.contact-img-container {
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+
+.contact-img-container img {
+  width: 32px;
+  filter: brightness(0) saturate(100%) invert(100%);
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.contact-pic {
+  max-width: 500px;
+}
+
+.contact-pic img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
