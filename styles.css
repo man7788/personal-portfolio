@@ -11,7 +11,7 @@ body {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Debug Borders */
 /* header,
-.about-img-container,
+.profile-name,
 .my-work,
 .work-screen,
 .work-info,
@@ -22,6 +22,7 @@ body {
   border: 2px solid orange;
 }
 
+.profile-pic,
 .about-me,
 .work-card,
 footer {
@@ -30,8 +31,11 @@ footer {
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Text Styles */
 .profile-name,
+.profile-name-tablet,
 .about-me h1,
+.about-me-tablet h1,
 .my-work h1,
+.work-screen-text,
 .work-name,
 footer h1 {
   font-family: "Playfair Display", sans-serif;
@@ -45,13 +49,28 @@ footer h1 {
 }
 
 .about-info,
+.about-info-tablet,
 .work-info {
   color: rgb(100, 100, 100);
 }
 
+/* @media (max-width: 750px) { */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Header */
+.about-me-tablet,
+.profile-container-tablet,
+.contact-phone {
+  display: none;
+}
+
 header {
-  background: linear-gradient(150deg, rgb(138, 168, 236) 60%, #fff 20%);
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container {
+  /* border: 5px solid orange; */
+  background: linear-gradient(160deg, rgb(138, 168, 236) 60%, #fff 20%);
+  min-width: 700px;
   display: flex;
   position: relative;
   justify-content: center;
@@ -61,11 +80,11 @@ header {
   position: absolute;
   bottom: 0em;
   font-size: 2.5em;
+  color: white;
   padding: 0 0 0.1em 0.2em;
 }
 
 .profile-pic {
-  color: white;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   margin-top: 1rem;
 }
@@ -216,11 +235,163 @@ footer {
 }
 
 .contact-pic {
-  max-width: 500px;
+  max-width: 750px;
 }
 
 .contact-pic img {
   width: 100%;
   object-fit: cover;
   display: block;
+}
+/* } */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Tablet Query*/
+
+@media (min-width: 751px) {
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Header*/
+  .profile-container {
+    display: none;
+  }
+
+  .profile-container-tablet {
+    /* border: 5px solid greenyellow; */
+    background: linear-gradient(165deg, rgb(138, 168, 236) 60%, #fff 10%);
+    display: grid;
+    justify-content: center;
+    width: 1000px;
+    height: 600px;
+  }
+
+  .profile-pic-container-tablet {
+    /* border: 5px solid greenyellow; */
+    width: fit-content;
+    display: grid;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: -13rem;
+  }
+
+  .profile-pic-tablet {
+    /* border: 10px solid violet; */
+    /* display: none; */
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    grid-column: 2/3;
+    background-image: url("./images/head-profile.jpg");
+    background-size: cover;
+    background-position: 0 -2rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .profile-name-tablet {
+    /* border: 10px solid blue; */
+    height: fit-content;
+    z-index: 1;
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-content: space-evenly;
+    font-size: 3em;
+    color: white;
+    margin-right: -5rem;
+    margin-top: 3rem;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .profile-name-text-tablet:nth-child(2) {
+    padding-left: 1rem;
+  }
+
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!About Me */
+  .about-me {
+    display: none;
+  }
+
+  .about-me-tablet {
+    /* border: 10px solid red; */
+    width: 600px;
+    height: fit-content;
+    background: white;
+    display: block;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 0 2rem 2rem 2rem;
+    /* margin-top: -18rem; */
+  }
+
+  .about-float-tablet {
+    border: 2px solid red;
+    width: 300px;
+    height: 170px;
+    float: right;
+  }
+
+  .about-me-tablet h1 {
+    /* border: 2px solid red; */
+    position: relative;
+    top: 1rem;
+    padding-left: 3.5rem;
+  }
+
+  .about-info-tablet {
+    /* border: 2px solid red; */
+    font-size: 1.5em;
+  }
+
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!My Work*/
+  .my-work {
+    display: grid;
+    column-gap: 4rem;
+    justify-content: center;
+  }
+
+  .my-work h1 {
+    grid-column: 1/3;
+  }
+
+  .work-card {
+    justify-self: center;
+  }
+
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Footer*/
+  footer {
+    justify-content: center;
+    column-gap: 4rem;
+    display: grid;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .contact-text {
+    grid-column: 1/2;
+  }
+
+  .contact-phone {
+    display: grid;
+    column-gap: 0.5rem;
+    align-items: center;
+  }
+
+  .contact-phone img {
+    width: 28px;
+    filter: brightness(0) saturate(100%) invert(100%);
+  }
+
+  .contact-phone-text {
+    grid-column: 2/3;
+  }
+
+  .contact-img-container {
+    grid-column: 1/2;
+  }
+
+  .contact-img-container img {
+    padding: 0 2rem 0 0;
+  }
+
+  .contact-pic {
+    width: 300px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
 }
