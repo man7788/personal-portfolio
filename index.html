@@ -22,7 +22,19 @@
       <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!Header Tablet-->
       <div class="profile-container-tablet">
         <div class="profile-pic-container-tablet">
-          <div class="profile-pic-tablet"></div>
+          <div class="profile-pic-tablet">
+            <picture>
+              <source
+                media="(min-width: 1001px)"
+                srcset="./images/head-profile-desktop.jpg"
+              />
+              <source
+                media="(min-width: 751px)"
+                srcset="./images/head-profile-tablet.jpg"
+              />
+              <img src="./images/head-profile.jpg" alt="" />
+            </picture>
+          </div>
           <div class="profile-name-tablet">
             <div class="profile-name-text-tablet">Amanada</div>
             <div class="profile-name-text-tablet">Sanders</div>
@@ -247,7 +259,16 @@
         />
       </div>
       <div class="contact-pic">
-        <img src="./images/footer-profile.jpg" alt="Amanda Sanders" />
+        <img
+          srcset="
+            ./images/footer-profile-500w.jpg   500w,
+            ./images/footer-profile-720w.jpg   720w,
+            ./images/footer-profile-1280w.jpg 1280w
+          "
+          sizes="(min-width: 751px) 300px"
+          src="./images/footer-profile-1280w.jpg"
+          alt="Amanda Sanders"
+        />
       </div>
     </footer>
   </body>

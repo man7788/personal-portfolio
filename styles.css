@@ -279,9 +279,9 @@ footer {
     width: 400px;
     height: 400px;
     grid-column: 2/3;
-    background-image: url("./images/head-profile.jpg");
+    /* background-image: url("./images/head-profile.jpg");
     background-size: cover;
-    background-position: 0 -2rem;
+    background-position: 0 -2rem; */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   }
 
@@ -408,7 +408,7 @@ footer {
 
   header {
     /* border: 5px solid greenyellow; */
-    background: linear-gradient(170deg, rgb(138, 168, 236) 70%, #fff 10%);
+    background: linear-gradient(175deg, rgb(138, 168, 236) 70%, #fff 10%);
     display: flex;
     justify-content: center;
     height: 700px;
@@ -443,9 +443,9 @@ footer {
     z-index: 1;
     width: 400px;
     height: 500px;
-    background-image: url("./images/head-profile.jpg");
+    /* background-image: url("./images/head-profile.jpg");
     background-size: cover;
-    background-position: 0 -2rem;
+    background-position: 0 -2rem; */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   }
 
